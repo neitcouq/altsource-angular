@@ -1,0 +1,114 @@
+<h1>Clothing</h1>
+<!-- LIST OF ITEMS -->
+<div class="row justify-content-md-center">
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-action">
+				<table>
+					<tr>
+						<td>Id</td>
+						<td>Size</td>
+						<td>Color</td>
+						<td>Type</td>
+						<td>Price</td>
+						<td>Stock unit</td>
+						<td>Buy</td>
+						<!-- <th>Delete</th> -->
+					</tr>
+					<tr *ngFor="let clothing of clothings">
+						<td>{{clothing.id}}</td>
+						<td>{{clothing.sizeName}}</td>
+						<td>{{clothing.colorName}}</td>
+						<td>{{clothing.typeName}}</td>
+						<td>{{clothing.price}}</td>
+						<td>{{clothing.stockUnit}}</td>
+						<td>
+							<button class="btn btn-primary btn-xs fa fa-pencil" (click)="onBuy(clothing)"></button>
+						</td>
+						<!-- <td>
+							<button class="btn btn-danger btn-xs fa fa-trash-o" (click)="onRemove(clothing)"></button>
+						</td> -->
+					</tr>
+				</table>
+				<!-- NEW ITEM -->
+				<div class="row justify-content-md-center">
+					<nav>
+						<a routerLink="/new-item" class="pull-right">New clothing</a>
+					</nav>
+				</div>
+			</li>
+		</ul>
+</div>
+
+<h1>Vendor</h1>
+<div class="row justify-content-md-center">
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-action">
+			<table>
+				<tr>
+					<td>Vendor name</td>
+					<td>Set current vendor</td>
+					<!-- <th>Delete</th> -->
+				</tr>
+				<tr *ngFor="let vendor of vendors">
+					<td>{{vendor.name}}</td>
+					<td><button class="btn btn-primary btn-xs fa fa-pencil" (click)="onSetCurrentVendor(vendor)"></button></td>
+					<!-- <td><button class="btn btn-danger btn-xs fa fa-trash-o" (click)="onRemove(vendor)"></button></td> -->
+				</tr>
+			</table>
+			<!-- NEW ITEM -->
+			<div class="row justify-content-md-center">
+				<nav>
+					<a routerLink="/new-vendor" class="pull-right">New vendor</a>
+				</nav>
+			</div>
+		</li>
+	</ul>
+</div>
+<h1>Clothing vendor</h1>
+<div class="row justify-content-md-center">
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-action">
+			<table>
+				<tr>
+					<td>Id</td>
+					<td>Clothing Id</td>
+					<td>Price</td>
+					<td>Unit</td>
+					<td>Vendor Id</td>
+					<td>Sell clothing</td>
+				</tr>
+				<tr *ngFor="let clothingvendor of clothingvendors">
+					<td>{{clothingvendor.id}}</td>
+					<td>{{clothingvendor.clothingId}}</td>
+					<td>{{clothingvendor.price}}</td>
+					<td>{{clothingvendor.unit}}</td>
+					<td>{{clothingvendor.vendorId}}</td>
+					<td><button class="btn btn-primary btn-xs fa fa-pencil" (click)="onSell(clothingvendor)"></button></td>
+
+				</tr>
+			</table>
+		</li>
+	</ul>
+</div>
+
+<h1>Clothing Retail</h1>
+<div class="row justify-content-md-center">
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-action">
+			<table>
+				<tr>
+					<td>Id</td>
+					<td>Clothing Vendor Id</td>
+					<td>Price</td>
+					<td>Vendor Id</td>
+				</tr>
+				<tr *ngFor="let clothingRetail of clothingRetails">
+					<td>{{clothingRetail.id}}</td>
+					<td>{{clothingRetail.clothingVendorId}}</td>
+					<td>{{clothingRetail.price}}</td>
+					<td>{{clothingRetail.vendorId}}</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,46 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="newItemForm"> 
+
+    <div class="form-group">
+        <label for="Clothing type">Type</label>
+        <select  class="form-control" formControlName="type">
+            <option *ngFor="let type of types" [value]="type.id">
+              {{type.name}}
+            </option>
+        </select>
+        
+    </div>
+
+    <div class="form-group">
+        <label for="Clothing type">Size</label>
+        <select  class="form-control" formControlName="size">
+            <option *ngFor="let size of sizes" [value]="size.id">
+              {{size.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Clothing type">Color</label>
+        <select  class="form-control" formControlName="color">
+            <option *ngFor="let color of colors" [value]="color.id">
+              {{color.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="itemName">Unit</label>
+        <input type="text" formControlName="stockUnit" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="itemName">Price</label>
+        <input type="text" formControlName="price" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save</button>    
+        <a routerLink="/items" class="btn btn-link">Cancel</a>
+    </div>
+
+</form>
