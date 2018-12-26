@@ -1,6 +1,6 @@
-# Todolist
+# AltSource Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8. It is a To-do list application used as a demo for learning purposes. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8. It is a To-do list based application used as a demo for AltSource API purposes. 
 
 ## Setup
 
@@ -13,7 +13,9 @@ Install dependencies
 npm install
 ```
 This application uses a backend counterpart. Please get it from here:
+
 https://github.com/neitcouq/altsource
+
 Download and follow its Readme.docx instructions.
 
 ## Use
