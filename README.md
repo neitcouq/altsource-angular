@@ -6,18 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Clone the repo
 ```
-git clone https://github.com/gbosetti/todo-list-with-angular-6
+git clone https://github.com/neitcouq/altsource-angular.git
 ```
 Install dependencies
 ```
 npm install
 ```
-This application uses a backend counterpart. It can be any of the following projects:
-* [A Mongo-based backend](https://github.com/gbosetti/todo-list-mongo-backend)
-* [A JsonServer-based backend](https://github.com/gbosetti/todo-list-jsonserver-backend)
-* [A Loopback-based backend](https://github.com/gbosetti/todo-list-loopback-backend.git)
-
-Choose one of them and follow its `Setup` instructions.
+This application uses a backend counterpart. Please get it from here:
+https://github.com/neitcouq/altsource
+Download and follow its Readme.docx instructions.
 
 ## Use
 
